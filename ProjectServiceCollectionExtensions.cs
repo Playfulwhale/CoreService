@@ -29,13 +29,6 @@ namespace ApiTemplate
     {
         public static IServiceCollection AddProjectCommands(this IServiceCollection services) =>
             services
-                .AddSingleton<IDeleteCarCommand, DeleteCarCommand>()
-                .AddSingleton<IGetCarCommand, GetCarCommand>()
-                .AddSingleton<IGetCarPageCommand, GetCarPageCommand>()
-                .AddSingleton<IPatchCarCommand, PatchCarCommand>()
-                .AddSingleton<IPostCarCommand, PostCarCommand>()
-                .AddSingleton<IPutCarCommand, PutCarCommand>()
-
                 .AddScoped<IDeleteContactUsCommand, DeleteContactUsCommand>()
                 .AddScoped<IGetContactUsCommand, GetContactUsCommand>()
                 .AddScoped<IPostContactUsCommand, PostContactUsCommand>()
@@ -75,18 +68,13 @@ namespace ApiTemplate
                 .AddScoped<IMapper<Models.Zone, Zone>, ZoneToZoneMapper>()
                 .AddScoped<IMapper<Models.Zone, PublicZone>, PublicZoneToZoneMapper>()
                 .AddScoped<IMapper<Models.Zone, SaveZone>, ZoneToSaveZoneMapper>()
-                .AddScoped<IMapper<SaveZone, Models.Zone>, ZoneToSaveZoneMapper>()
-
-                .AddSingleton<IMapper<Models.Car, Car>, CarToCarMapper>()
-                .AddSingleton<IMapper<Models.Car, SaveCar>, CarToSaveCarMapper>()
-                .AddSingleton<IMapper<SaveCar, Models.Car>, CarToSaveCarMapper>();
+                .AddScoped<IMapper<SaveZone, Models.Zone>, ZoneToSaveZoneMapper>();
 
         public static IServiceCollection AddProjectRepositories(this IServiceCollection services) =>
             services
                 .AddScoped<IContactUsRepository, ContactUsRepository>()
                 .AddScoped<ICountryRepository, CountryRepository>()
-                .AddScoped<IZoneRepository, ZoneRepository>()
-                .AddSingleton<ICarRepository, CarRepository>();
+                .AddScoped<IZoneRepository, ZoneRepository>();
 
         public static IServiceCollection AddProjectServices(this IServiceCollection services) =>
             services
