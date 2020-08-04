@@ -11,16 +11,16 @@ namespace ApiTemplate.Mappers.ZoneMappers
 {
     public class ZoneToZoneMapper : IMapper<Models.Zone, Zone>
     {
-        private readonly IHttpContextAccessor httpContextAccessor;
-        private readonly LinkGenerator linkGenerator;
+            private readonly IHttpContextAccessor httpContextAccessor;
+            private readonly LinkGenerator linkGenerator;
 
-        public ZoneToZoneMapper(
-           IHttpContextAccessor httpContextAccessor,
-           LinkGenerator linkGenerator)
-        {
-            this.httpContextAccessor = httpContextAccessor;
-            this.linkGenerator = linkGenerator;
-        }
+            public ZoneToZoneMapper(
+               IHttpContextAccessor httpContextAccessor,
+               LinkGenerator linkGenerator)
+            {
+                this.httpContextAccessor = httpContextAccessor;
+                this.linkGenerator = linkGenerator;
+            }
         public void Map(Models.Zone source, Zone destination)
         {
             if (source == null)

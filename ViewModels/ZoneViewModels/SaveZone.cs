@@ -1,6 +1,5 @@
 ﻿namespace ApiTemplate.ViewModels.ZoneViewModels
 {
-    using Swashbuckle.AspNetCore.Annotations;
     using System.ComponentModel.DataAnnotations;
 
     public class SaveZone

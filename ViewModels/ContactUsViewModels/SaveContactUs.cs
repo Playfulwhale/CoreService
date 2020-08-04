@@ -1,6 +1,5 @@
 ﻿namespace ApiTemplate.ViewModels.ContactUsViewModels
 {
-    using Swashbuckle.AspNetCore.Annotations;
     using System.ComponentModel.DataAnnotations;
 
     /// <summary>

@@ -13,7 +13,7 @@
 
 
 
-    //[Authorize(AuthenticationSchemes = IdentityServerAuthenticationDefaults.AuthenticationScheme)]
+    //
     [Route("[controller]")]
     [ApiController]
     [ApiVersion(ApiVersionName.V1)]
